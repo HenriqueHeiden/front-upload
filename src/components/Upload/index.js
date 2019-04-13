@@ -12,7 +12,7 @@ export default class Upload extends Component {
       return <UploadMessage type="error">Arquivo não suportado</UploadMessage>
     }
 
-    return <UploadMessage type="Sucess"> Solte os arquivos aqui</UploadMessage>
+    return <UploadMessage type="sucess"> Solte os arquivos aqui</UploadMessage>
   };
   
   render() {
