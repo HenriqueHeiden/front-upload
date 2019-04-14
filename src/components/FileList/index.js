@@ -5,7 +5,7 @@ import { MdCheckCircle, MdError, MdLink } from 'react-icons/md';
 
 import { Container, FileInfo, Preview } from './styles';
 
-const FileList = ({ files }) => (
+const FileList = ({ files, onDelete }) => (
     <Container>
         {files.map(uploadedFile => (
             <li key={uploadedFile.id}>
@@ -15,7 +15,7 @@ const FileList = ({ files }) => (
                     <div>
                         <strong>{uploadedFile.name}</strong>
                         <span>{uploadedFile.readableSize}
-                            {uploadedFile.url && (<button onclick={() => { }}> Excluir </button>)}
+                            {uploadedFile.url && (<button onClick={() => onDelete(uploadedFile.id)}> Excluir </button>)}
                         </span>
                     </div>
                 </FileInfo>
